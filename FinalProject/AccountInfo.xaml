@@ -1,0 +1,53 @@
+﻿<Window x:Class="FinalProject.AccountInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="My Account" Height="650" Width="400" Background="SeaShell">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="10*" />
+
+        </Grid.RowDefinitions>
+
+        <!-- Name -->
+        <Label Grid.Row="0" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Name:</Label>
+        <Label Grid.Row="1" x:Name="lblName" Padding="50,5,5,5" FontSize="18" FontWeight="Bold" Content="Eve Likes Bear Cookies" Foreground="#FF59594A" />
+
+        <!-- Tickets -->
+        <Label Grid.Row="2" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Tickets</Label>
+        <DataGrid Grid.Row="3" x:Name="dgrdTickets" MaxWidth="300" Padding="5,5,5,5" MouseDoubleClick="dgrdTickets_MouseDoubleClick" >
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgrdTicketsColumn" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Booking Botton -->
+        <Button Grid.Row="4" x:Name="btnBooking" MaxWidth="200" MaxHeight="30" FontFamily="Segoe Print" Background="#FFD4DCCD" Click="btnBooking_Click">Book Another Show!</Button>
+    
+        <!-- Phone No. -->
+        <Label Grid.Row="5" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Phone No.:</Label>
+        <Label Grid.Row="6" x:Name="lblPhone" Padding="50,5,5,5" FontSize="18" FontWeight="Bold" Content="416 000 0000" Foreground="#FF59594A" />
+
+
+        <!-- Billing Address -->
+        <Label Grid.Row="7" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Billing Address:</Label>
+        <TextBlock Grid.Row="8" x:Name="txtAddress" Padding="50,5,5,5" FontSize="18" FontWeight="Bold" TextWrapping="Wrap " Text="940 Progress Ave. Scarborough ON M1G 3T8" Foreground="#FF59594A" />
+
+        <!-- Button Modify Info -->
+        <Button Grid.Row="9" x:Name="btnModifyInfo" MaxWidth="180" MaxHeight="30" Background="#98A7B9" Click="btnModifyInfo_Click">Modify Account Infomation</Button>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="FinalProject.Booking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Booking" Height="400" Width="400" Background="SeaShell">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Greeting -->
+        <Label Grid.Row="0" x:Name="lblGreeting" VerticalContentAlignment="Bottom" Padding="50,5,5,5" Content="Hi, Name!"/>
+
+        <!-- Shows -->
+        <Label Grid.Row="1" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Show Available:</Label>
+        <ComboBox Grid.Row="2" x:Name="cboTickets" MaxWidth="300" MaxHeight="30" SelectedIndex="0"/>
+
+        <!-- Quantity -->
+        <Label Grid.Row="3" VerticalContentAlignment="Bottom" Padding="50,5,5,5" >Quantity:</Label>
+        <ComboBox Grid.Row="4" x:Name="cboQuantity"  MaxHeight="30" Margin="50,0,0,0" HorizontalAlignment="Left" MinWidth="50" SelectedIndex="0"/>
+        
+        <!-- Save Button -->
+        <Button Grid.Row="5" x:Name="btnBooking" MaxWidth="200" MaxHeight="30" FontFamily="Segoe Print" Background="#FFD4DCCD" Click="btnBooking_Click" >Book it!</Button>
+
+        <!-- Back Button -->
+        <Button Grid.Row="6" x:Name="btnBackAccountInfo" MaxWidth="200" MaxHeight="30" BorderBrush="White" Background="Transparent" Click="btnBackAccountInfo_Click">
+            <TextBlock TextDecorations="underline"> Back to Account Information</TextBlock>
+        </Button>
+
+    </Grid>
+</Window>
